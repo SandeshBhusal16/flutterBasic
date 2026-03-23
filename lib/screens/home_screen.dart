@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'counter_screen.dart';
+import 'todo_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   // ADDED:
@@ -34,6 +35,15 @@ class HomeScreen extends StatelessWidget {
                 );
               },
               child: const Text("Counter"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const TodoScreen()),
+                );
+              },
+              child: const Text('Todo'),
             ),
           ],
         ),
